@@ -1,0 +1,18 @@
+; an example of printing 'flag.txt' by syscall_readfile
+
+PUSH 0x7478742e
+PUSH 0x67616c66
+MOV R8, 3
+MOV R1, SP
+MOV R2, 0x500010
+MOV R3, 100
+SYSCALL
+
+MOV R8, 1
+MOV R1, 0x500010
+MOV R2, 30
+SYSCALL
+
+MOV R8, 2
+MOV R1, 0
+SYSCALL
